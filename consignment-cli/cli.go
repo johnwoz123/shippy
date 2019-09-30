@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	pb "github.com/johnwoz123/shippy-service-consignment/proto/consignment"
+	pb "github.com/johnwoz123/shippy/consignment-service/proto/consignment"
 	"google.golang.org/grpc"
 )
 
@@ -32,7 +32,7 @@ func main() {
 	}
 
 	defer conn.Close()
-	client := pb.NewShippigServiceClient(conn)
+	client := pb.NewShippingServiceClient(conn)
 	file := defaultFilename
 	if len(os.Args) > 1 {
 		file = os.Args[1]
