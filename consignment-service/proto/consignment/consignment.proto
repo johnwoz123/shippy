@@ -20,7 +20,6 @@ message Container {
   string id = 1;
   string customer_id = 2;
   string origin = 3;
-
   string user_id = 4;
 }
 
